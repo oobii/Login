@@ -49,10 +49,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfF-tT-aIy">
                                                 <rect key="frame" x="0.0" y="0.0" width="117" height="42.5"/>
                                                 <state key="normal" title="Forgot username"/>
+                                                <connections>
+                                                    <action selector="forgotUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUy-sG-Yz0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNJ-ak-aHy">
                                                 <rect key="frame" x="127" y="0.0" width="117" height="42.5"/>
                                                 <state key="normal" title="Forgot password"/>
+                                                <connections>
+                                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5S2-3I-FDt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -73,7 +79,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cwp-cm-orf"/>
                     <connections>
+                        <outlet property="forgotPassword" destination="JNJ-ak-aHy" id="66s-rT-kju"/>
+                        <outlet property="forgotUsername" destination="EfF-tT-aIy" id="lmF-3T-kOE"/>
                         <outlet property="username" destination="WfT-cb-P4A" id="80X-iD-Ehh"/>
+                        <segue destination="cWD-Ak-atT" kind="show" identifier="ForgottenUsernameOrPassword" id="Vas-Qf-g9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,4 +127,7 @@
             <point key="canvasLocation" x="-108" y="128.18590704647679"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vas-Qf-g9q"/>
+    </inferredMetricsTieBreakers>
 </document>
